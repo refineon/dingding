@@ -112,7 +112,6 @@ class OAuthClient extends Client
             'timestamp' => $timestamp = (int) microtime(true) * 1000,
             'signature' => $this->signature($timestamp),
         ];
-
         return $this->postJson('sns/getuserinfo_bycode', $data, $query);
     }
 
